@@ -1,0 +1,24 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "VisualEditor98",
+            "Effect": "Allow",
+            "Action": [
+                "dynamodb:PutItem",
+                "dynamodb:GetItem",
+                "dynamodb:Scan",
+                "dynamodb:Query",
+                "dynamodb:UpdateItem",
+                "dynamodb:UpdateTable",
+                "logs:CreateLogGroup",
+                "logs:PutLogEvents"
+            ],
+            "Resource": [
+                "arn:*:logs:*:*:*",
+                "arn:aws:dynamodb:us-east-1:474683445819:table/status",
+                "arn:aws:dynamodb:us-east-1:474683445819:table/status-messages"
+            ]
+        }
+    ]
+}

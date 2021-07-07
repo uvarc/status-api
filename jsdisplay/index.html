@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>Demo Grid</title>
+<style>
+.mainwrapper {
+    display: table;
+    font-family:sans-serif;
+    font-size: 70%;
+    width:320px;
+}
+.itemwrapper {
+    display: table-row;
+    border:solid 1px #555;
+    padding:4px;
+}
+.picture, .item {
+    display: table-cell;
+    width:40%;
+    min-width:80px;
+    border-bottom: solid 1px #333;
+    padding:8px;
+}
+.itemh {
+    display: table-cell;
+    width:60%;
+    min-width:100px;
+    border-bottom: solid 1px #333;
+    padding:8px;
+}
+</style>
+<script>
+
+url = 'https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/grid';
+fetch('https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/grid')
+  .then(function (response) {
+    return response.json();
+  })
+  .then(function (data) {
+    appendData(data);
+  })
+  .catch(function (err) {
+    console.log(err);
+  });
+
+  function appendData(data) {
+  var mainContainer = document.getElementById("myData");
+  for (var i = 0; i < data.length; i++) {
+    var div = document.createElement("div");
+    div.innerHTML = '<div class="itemwrapper"><div class="itemh">' + data[i].title + '</div><div class="item" style="background-color:' + data[i].color + ';color:white;">' + data[i].message + '</div></div>';
+    mainContainer.appendChild(div);
+  }
+}
+</script>
+</head>
+<body>
+    <h1>Demo Grid</h1>
+    <div id="myData" class="mainwrapper"></div>
+
+</body>
+</html>
