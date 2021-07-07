@@ -17,10 +17,10 @@ Data is updated via Slack Bot commands to `gopherbot`. From the #general channel
 !status (ok/clear) - remove the status message from the website (channels: general)
 ```
 Color key:
-- [Green](https://www.rc.virginia.edu/images/status/green.png) - System running nominally
-- [Yellow](https://www.rc.virginia.edu/images/status/yellow.png) - System moderately impaired
-- [Red](https://www.rc.virginia.edu/images/status/red.png) - System severely impaired or unavailable
-- [Blue](https://www.rc.virginia.edu/images/status/blue.png) - System under maintenance
+- ![Green](https://www.rc.virginia.edu/images/status/green.png) - System running nominally
+- ![Yellow](https://www.rc.virginia.edu/images/status/yellow.png) - System moderately impaired
+- ![Red](https://www.rc.virginia.edu/images/status/red.png) - System severely impaired or unavailable
+- ![Blue](https://www.rc.virginia.edu/images/status/blue.png) - System under maintenance
 
 ## Lambda Function
 
@@ -45,6 +45,9 @@ A **GET** method endpoint that returns a badge-ready JSON payload for any given 
   "color": "5cb85c"
 }
 ```
+
+An example badge, using the `shields.io` open endpoint coupled with the API data above:
+![Rivanna Badge](https://img.shields.io/endpoint?url=https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/badge/rivanna&style=for-the-badge)
 
 2. `https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/grid`
 A **GET** method endpoint that returns a full array of status across all seven systems. All fields are included and are used in UI display for sorting, filtering, etc.
