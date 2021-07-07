@@ -22,7 +22,7 @@ Data is updated via Slack Bot commands to `gopher` bot. From the `#general` chan
 Color Key:
 
 | Symbol | Color | Status |
-|---|---|---|
+|:---:|:---:|:---|
 | ![Green](https://www.rc.virginia.edu/images/status/green.png) | GREEN  | System running nominally |
 | ![Green](https://www.rc.virginia.edu/images/status/yellow.png) | YELLOW  | System moderately impaired |
 | ![Green](https://www.rc.virginia.edu/images/status/red.png) | RED  | System severely impaired or unavailable |
