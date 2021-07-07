@@ -2,6 +2,8 @@
 
 This Chalice application creates API Gateway handlers in AWS Lambda for the "status" display on the UVA Research Computing website.
 
+![Status Grid](./status-grid.png)
+
 ## Data
 
 Data for this application is stored in DynamoDB tables:
