@@ -13,7 +13,7 @@ Data for this application is stored in DynamoDB tables:
 
 Data is updated via Slack Bot commands to `gopher` bot. From the `#general` channel, invoke the bot using the `!status` command:
 
-```
+```bash
 !status (rivanna/ivy/skyline/dcos/value/project/globus) (green/yellow/red/blue) - update the website system status (channels: general)
 !status message <text of message> - update the website system status text (channels: general)
 !status (ok/clear) - remove the status message from the website (channels: general)
@@ -45,7 +45,7 @@ The published API exists at the following endpoints:
 
 A **GET** method endpoint that returns a badge-ready JSON payload for any given system (`rivanna`, `ivy`, `skyline`, `dcos`, `globus`, `value`, or `project`)
 
-```
+```json
 {
   "schemaVersion": 1,
   "label": "Rivanna",
@@ -62,7 +62,7 @@ An example badge, using the `shields.io` open endpoint coupled with the API data
 
 A **GET** method endpoint that returns a full array of status across all seven systems. All fields are included and are used in UI display for sorting, filtering, etc.
 
-```
+```json
 [
   {
     "system": "rivanna",
@@ -98,7 +98,7 @@ A **GET** endpoint for retrieving any service update messages for display on the
 
 Note that this payload always contains a minimal datetime placeholder, but must be populated further in order to be rendered in the UI:
 
-```
+```json
 [
   {
     "message": "message",
