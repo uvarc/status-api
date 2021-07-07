@@ -18,11 +18,16 @@ Data is updated via Slack Bot commands to `gopherbot`. From the #general channel
 !status message <text of message> - update the website system status text (channels: general)
 !status (ok/clear) - remove the status message from the website (channels: general)
 ```
-Color key:
-- ![Green](https://www.rc.virginia.edu/images/status/green.png) - **GREEN**: System running nominally
-- ![Yellow](https://www.rc.virginia.edu/images/status/yellow.png) - **YELLOW**: System moderately impaired
-- ![Red](https://www.rc.virginia.edu/images/status/red.png) - **RED**: System severely impaired or unavailable
-- ![Blue](https://www.rc.virginia.edu/images/status/blue.png) - **BLUE**: System under maintenance
+
+Color Key:
+
+| Symbol | Color | Status |
+|---|---|---|
+| ![Green](https://www.rc.virginia.edu/images/status/green.png) | GREEN  | System running nominally |
+| ![Green](https://www.rc.virginia.edu/images/status/green.png) | YELLOW  | System moderately impaired |
+| ![Green](https://www.rc.virginia.edu/images/status/green.png) | RED  | System severely impaired or unavailable |
+| ![Green](https://www.rc.virginia.edu/images/status/green.png) | BLUE  | System under maintenance |
+
 
 ## Lambda Function
 
