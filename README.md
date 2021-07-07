@@ -42,6 +42,7 @@ Permissions for the Lambda function are derived from `.chalice/policy-dev.json`.
 The published API exists at the following endpoints:
 
 1. `https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/badge/{system}`
+
 A **GET** method endpoint that returns a badge-ready JSON payload for any given system (`rivanna`, `ivy`, `skyline`, `dcos`, `globus`, `value`, or `project`)
 
 ```
@@ -58,6 +59,7 @@ An example badge, using the `shields.io` open endpoint coupled with the API data
 ![Rivanna Badge](https://img.shields.io/endpoint?url=https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/badge/rivanna&style=for-the-badge)
 
 2. `https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/grid`
+
 A **GET** method endpoint that returns a full array of status across all seven systems. All fields are included and are used in UI display for sorting, filtering, etc.
 
 ```
@@ -91,6 +93,7 @@ A **GET** method endpoint that returns a full array of status across all seven s
 ```
 
 3. `https://tja4lfp3da.execute-api.us-east-1.amazonaws.com/api/messages`
+
 A **GET** endpoint for retrieving any service update messages for display on the home page of the UVARC website.
 
 Note that this payload always contains a minimal datetime placeholder, but must be populated further in order to be rendered in the UI:
