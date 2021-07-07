@@ -11,7 +11,7 @@ Data for this application is stored in DynamoDB tables:
 - `status`
 - `status-messages`
 
-Data is updated via Slack Bot commands to `gopherbot`. From the #general channel, invoke the bot using the `!status` command:
+Data is updated via Slack Bot commands to `gopher` bot. From the `#general` channel, invoke the bot using the `!status` command:
 
 ```
 !status (rivanna/ivy/skyline/dcos/value/project/globus) (green/yellow/red/blue) - update the website system status (channels: general)
