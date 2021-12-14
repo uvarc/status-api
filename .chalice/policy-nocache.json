@@ -18,7 +18,6 @@
                 "arn:*:logs:*:*:*",
                 "arn:aws:dynamodb:us-east-1:474683445819:table/status",
                 "arn:aws:dynamodb:us-east-1:474683445819:table/status-messages",
-                "arn:aws:dynamodb:us-east-1:474683445819:table/accord-messages",
                 "arn:aws:dynamodb:us-east-1:474683445819:table/persona"
             ]
         }

@@ -88,7 +88,7 @@ def get_messages():
 
 
 @app.route('/accord/messages', methods=[ 'GET'], cors=True)
-def get_messages():
+def get_accord_messages():
     table = dynamodb.Table('accord-messages')
     messages = []   
     msgs = table.scan()
@@ -98,6 +98,28 @@ def get_messages():
         return messages
     except Exception as e:
         return response({'message': e.message}, 400)
+
+
+@app.route('/accord/messages', methods=[ 'POST'])
+def post_accord_message():
+    table = dynamodb.Table('accord-messages')
+    payload = app.current_request.json_body
+    print(payload)
+    # We'll echo the json body back to the user in a 'user' key.
+    body = payload['message']
+    try:
+        update_this = table.update_item(
+            Key={
+                'message': 'message'
+            },
+            UpdateExpression="set message=:m, body=:b",
+            ExpressionAttributeValues={
+                ':m': 'message',
+                ':b': body
+            }
+        )
+    except Exception as e:
+        return {'exception': e.message}
 
 
 @app.route('/persona/{pkey}', methods=['GET'], cors=True)
